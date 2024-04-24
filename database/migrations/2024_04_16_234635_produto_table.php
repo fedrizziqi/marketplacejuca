@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('produto', function(Blueprint $table) {
                 $table->id()->primary()->autoIncrement();
+                $table->string('nome');
                 $table->text('descricao');
                 $table->text('imagem')->charset('binary');
                 $table->decimal('preco',5,2);
